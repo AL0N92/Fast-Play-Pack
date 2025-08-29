@@ -1,0 +1,63 @@
+// Шапка
+header {
+    height: 70px;
+    background: $header-bg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    -webkit-app-region: drag;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo img {
+    width: 32px;
+    height: 32px;
+}
+.logo-fast {
+    color: $white-text;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.logo-rest {
+    color: $text-color;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.window-controls {
+    display: flex;
+    -webkit-app-region: no-drag;
+}
+
+.control-btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: $button-hover;
+    }
+}
+
+#close-btn:hover {
+    background-color: $close-hover;
+}
+
+.control-btn img {
+    width: 14px;
+    height: 14px;
+}
