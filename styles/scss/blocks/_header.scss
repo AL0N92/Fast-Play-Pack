@@ -1,6 +1,7 @@
 // Шапка
 header {
     height: 70px;
+    min-height: 70px;
     background: $header-bg;
     display: flex;
     justify-content: space-between;
@@ -11,18 +12,21 @@ header {
 
 .logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 5px;
 }
 
 .logo img {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
 }
 .logo-fast {
     color: $white-text;
     font-weight: 900;
     font-size: 20px;
-    line-height: 1;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
 }
 
 .logo-rest {

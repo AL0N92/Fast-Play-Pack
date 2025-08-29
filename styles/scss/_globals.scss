@@ -8,7 +8,7 @@
 @import "./blocks/header";
 @import './blocks/buttons';
 @import './blocks/modals';
-
+@import './blocks/pathDisplay';
 
 body {
     background-color: $bg-color;
@@ -40,7 +40,7 @@ main {
 
 .info-text {
     font-size: 12px;
-    font-weight: 900;
+    font-weight: 700;
     color: $text-color;
     margin-bottom: 10px;
     line-height: 1.4;
@@ -51,11 +51,3 @@ main {
     color: $white-text;
 }
 
-.path-text {
-    font-size: 12px;
-    font-weight: 900;
-    color: $path-text;
-    margin-top: 5px;
-    word-break: break-all;
-    line-height: 1.4;
-}

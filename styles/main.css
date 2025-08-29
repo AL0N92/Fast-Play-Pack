@@ -29,6 +29,7 @@
 
 header {
   height: 70px;
+  min-height: 70px;
   background: #171717;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,22 +48,29 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 5px;
 }
 
 .logo img {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
 }
 
 .logo-fast {
   color: white;
   font-weight: 900;
   font-size: 20px;
-  line-height: 1;
+  line-height: 1.2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo-rest {
@@ -102,7 +110,7 @@ header {
 }
 
 #close-btn:hover {
-  background-color: #c27177;
+  background-color: rgba(224, 123, 130, 0.2470588235);
 }
 
 .control-btn img {
@@ -216,6 +224,21 @@ header {
   background-color: #45a049;
 }
 
+.path-div {
+  margin: 0;
+  background-color: #313131;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.path-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #d4d4d4;
+  word-break: break-all;
+  line-height: 1.4;
+}
+
 body {
   background-color: #1E1E1E;
   color: #B6B6B6;
@@ -263,7 +286,7 @@ main {
 
 .info-text {
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 700;
   color: #B6B6B6;
   margin-bottom: 10px;
   line-height: 1.4;
@@ -272,13 +295,4 @@ main {
 
 .white-text {
   color: white;
-}
-
-.path-text {
-  font-size: 12px;
-  font-weight: 900;
-  color: #5D5D5D;
-  margin-top: 5px;
-  word-break: break-all;
-  line-height: 1.4;
 }/*# sourceMappingURL=main.css.map */
