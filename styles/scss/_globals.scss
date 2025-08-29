@@ -1,0 +1,53 @@
+// Общие стили
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+@import "./blocks/header";
+@import './blocks/buttons';
+@import './blocks/modals';
+@import './blocks/pathDisplay';
+
+body {
+    background-color: $bg-color;
+    color: $text-color;
+    overflow: hidden;
+    user-select: none;
+}
+
+#app {
+    width: 450px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    background: $app-bg;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    resize: none;
+}
+
+// Основное содержимое
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: $text-color;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.white-text {
+    color: $white-text;
+}
+

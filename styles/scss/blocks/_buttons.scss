@@ -1,0 +1,36 @@
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.action-btn {
+    background: $button-bg;
+    border: none;
+    color: $text-color;
+    padding: 8px 12px;
+    font-size: 11px;
+    font-weight: 900;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+
+    &:hover {
+        background: $button-hover;
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
+
+#install-btn {
+    background: $install-btn;
+    color: $white-text;
+
+    &:hover {
+        background: $install-btn-hover;
+    }
+}

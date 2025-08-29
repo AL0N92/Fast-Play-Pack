@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../../fonts/Inter-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../../fonts/Inter-Bold.woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../../fonts/Inter-Black.woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 * {
   margin: 0;
   padding: 0;
@@ -6,36 +27,9 @@
   font-family: "Inter", sans-serif;
 }
 
-body {
-  background-color: #1E1E1E;
-  color: #B6B6B6;
-  overflow: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-#app {
-  width: 450px;
-  height: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #232323;
-  border-radius: 8px;
-  overflow: hidden;
-  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  resize: none;
-}
-
 header {
   height: 70px;
+  min-height: 70px;
   background: #171717;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,22 +48,29 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 5px;
 }
 
 .logo img {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
 }
 
 .logo-fast {
   color: white;
   font-weight: 900;
   font-size: 20px;
-  line-height: 1;
+  line-height: 1.2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo-rest {
@@ -109,51 +110,12 @@ header {
 }
 
 #close-btn:hover {
-  background-color: #c27177;
+  background-color: rgba(224, 123, 130, 0.2470588235);
 }
 
 .control-btn img {
   width: 14px;
   height: 14px;
-}
-
-main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.info-text {
-  font-size: 12px;
-  font-weight: 900;
-  color: #B6B6B6;
-  margin-bottom: 10px;
-  line-height: 1.4;
-  text-transform: uppercase;
-}
-
-.white-text {
-  color: white;
-}
-
-.path-text {
-  font-size: 12px;
-  font-weight: 900;
-  color: #5D5D5D;
-  margin-top: 5px;
-  word-break: break-all;
-  line-height: 1.4;
 }
 
 .buttons {
@@ -260,4 +222,77 @@ main {
 
 #java-status button:hover {
   background-color: #45a049;
+}
+
+.path-div {
+  margin: 0;
+  background-color: #313131;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.path-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #d4d4d4;
+  word-break: break-all;
+  line-height: 1.4;
+}
+
+body {
+  background-color: #1E1E1E;
+  color: #B6B6B6;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#app {
+  width: 450px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #232323;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  resize: none;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info-text {
+  font-size: 12px;
+  font-weight: 700;
+  color: #B6B6B6;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.white-text {
+  color: white;
 }/*# sourceMappingURL=main.css.map */
