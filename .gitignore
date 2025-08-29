@@ -1,0 +1,26 @@
+# Зависимости
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Файлы окружения (если используете)
+.env
+.env.local
+.env.production
+
+# Логи и временные файлы
+logs/
+*.log
+.npm/
+.eslintcache
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
