@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';"> -->
+
+    <title>FAST PLAY PACK LAUNCHER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/css/main.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">
+                <div class="logo-fast"><img src="images/icon.png">FAST</div>
+                <div class="logo-rest">PLAY PACK LAUNCHER</div>
+            </div>
+            <div class="window-controls">
+                <div class="control-btn" id="minimize-btn">
+                    <img src="images/window-min.png" alt="Minimize">
+                </div>
+                <div class="control-btn" id="close-btn">
+                    <img src="images/window-close.png" alt="Close">
+                </div>
+            </div>
+        </header>
+        <main>
+            <div>
+                <div class="info-text">
+                    В ДАННЫЙ МОМЕНТ ЛАУНЧЕР УСТАНАВЛИВАЕТ ТОЛЬКО СБОРКУ АВТОРА: <span class="white-text">Vanila++</span>
+                </div>
+                <div class="info-text">
+                    ТЕКУЩАЯ УСТАНОВЛЕННАЯ ВЕРСИЯ СБОРКИ: 1.4
+                </div><br>
+                <div class="info-text">
+                    МЕСТО УСТАНОВКИ (ПАПКА С ВАШЕЙ ИГРОЙ):
+                </div>
+                <div class="path-div">
+                    <div class="path-text" id="install-path">
+                        C:\Users\admin\AppData\Roaming\PrismLauncher\instances\1.21.1
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="action-btn" id="install-btn">Установить</button>
+                <button class="action-btn" id="java-btn">Проверить версию java</button>
+                <button class="action-btn" id="folder-btn">Папка</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Модальные окна -->
+    <div class="modal" id="download-modal">
+        <div class="modal-content">
+            <h3>УСТАНОВКА СБОРКИ</h3>
+            <div class="status-text" id="status-text">Подготовка к загрузке...</div>
+            <div class="progress-bar">
+                <div class="progress" id="download-progress"></div>
+            </div>
+            <button class="action-btn" id="cancel-btn">Отмена</button>
+        </div>
+    </div>
+
+    <div class="modal" id="java-modal">
+        <div class="modal-content">
+            <h3>ИНФОРМАЦИЯ О JAVA</h3>
+            <div class="status-text" id="java-info">Проверка установленной версии Java...</div>
+            <button class="action-btn" id="close-java-btn">Закрыть</button>
+        </div>
+    </div>
+
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <h3>УСТАНОВКА ЗАВЕРШЕНА</h3>
+            <div class="status-text">Сборка успешно установлена!</div>
+            <button class="action-btn" id="close-success-btn">OK</button>
+        </div>
+    </div>
+
+    <!-- Подключаем скрипты в конце body -->
+    <script src="js/modules/modal-manager.js"></script>
+    <script src="js/modules/window-manager.js"></script>
+    <script src="js/modules/java-checker.js"></script>
+    <script src="js/modules/folder-selector.js"></script>
+    <script src="js/modules/download-manager.js"></script>
+    <script src="js/renderer.js"></script>
+</body>
+</html>
