@@ -22,7 +22,7 @@ function createWindow() {
         }
     });
 
-    mainWindow.loadFile('index.html');
+    mainWindow.loadFile('src/index.html');
     // mainWindow.webContents.openDevTools();
 }
 
